@@ -1,0 +1,46 @@
+*,
+input,
+button {
+  font-family: "Roboto", sans-serif;
+  color: #2c3436;
+}
+
+body {
+  background: white;
+  background-color: white;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 80vw;
+  width: 80vw;
+  max-width: 80vw;
+}
+
+.content {
+  overflow: scroll;
+  height: 100%;
+}
+
+.cm-editor {
+  width: 100%;
+  height: 200vh;
+}
+
+.cm-editor * {
+  font-family: "Space Mono", monospace;
+}
+
+.cm-focused {
+  outline: none !important;
+}

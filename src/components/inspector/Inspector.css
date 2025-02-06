@@ -1,0 +1,55 @@
+.inspector {
+  background: #f5f7fa;
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #d4d5d6;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.inspector-topbar {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.inspector-topbar-emoji {
+  align-items: center;
+  background: white;
+  background-color: white;
+  border: 1px solid #d4d5d6;
+  border-radius: 6px;
+  display: flex;
+  height: 64px;
+  font-size: 40px;
+  justify-content: center;
+  width: 64px;
+}
+
+.inspector-topbar-filename {
+  font-size: 1.5rem;
+}
+
+.inspector-tab {
+  display: flex;
+}
+
+.inspector-tab-left,
+.inspector-tab-right {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.inspector-tab-left {
+  flex: 1;
+}
+
+button {
+  background: white;
+  background-color: white;
+  border: 1px solid #d4d5d6;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.6rem 2rem;
+}
