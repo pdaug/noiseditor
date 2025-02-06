@@ -9,6 +9,7 @@ const Inspector = function ({ setTabName }: InspectorProps) {
     <div className="inspector">
       <div className="inspector-tab">
         <button
+          className="inspector-tab-active"
           onClick={function () {
             setTabName("source");
             return;
@@ -23,15 +24,13 @@ const Inspector = function ({ setTabName }: InspectorProps) {
           Metadata
         </button>
       </div>
-      <div className="inspector-tab">
-        <button
-          onClick={function () {
-            setTabName("metadata");
-            return;
-          }}>
-          Run
-        </button>
-      </div>
+      <button
+        onClick={function () {
+          setTabName("metadata");
+          return;
+        }}>
+        Run
+      </button>
     </div>
   );
 };

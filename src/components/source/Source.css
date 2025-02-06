@@ -1,0 +1,48 @@
+.cm-theme {
+  height: 100%;
+}
+
+.cm-editor {
+  background: var(--bg-color);
+  background-color: var(--bg-color);
+  height: 100%;
+}
+
+.cm-editor * {
+  font-family: "Space Mono", monospace;
+}
+
+.cm-gutters {
+  background: var(--lg-color) !important;
+  background-color: var(--lg-color) !important;
+  width: 64px !important;
+}
+
+.cm-lineNumbers {
+  flex: 1 !important;
+}
+
+.cm-activeLine {
+  background: var(--lg-color) !important;
+  background-color: var(--lg-color) !important;
+}
+
+.cm-focused {
+  outline: none !important;
+}
+
+.cm-scroller::-webkit-scrollbar {
+  background: var(--fg-color);
+  background-color: var(--fg-color);
+  height: 8px;
+  width: 8px;
+}
+
+.cm-scroller::-webkit-scrollbar-thumb {
+  background: var(--lg-color);
+}
+
+.cm-scroller::-webkit-scrollbar-corner {
+  background: var(--fg-color);
+  background-color: var(--fg-color);
+}

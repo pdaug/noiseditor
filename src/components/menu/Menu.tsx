@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { File, Folder, GearSix } from "@phosphor-icons/react";
+import { File, Folder, GearSix, Plus } from "@phosphor-icons/react";
 
 import "./Menu.css";
 
@@ -27,13 +27,13 @@ const Menu = function ({ options }: MenuProps) {
     <div className="menu">
       <div className="menu-inner">
         <div className="menu-logo">
-          <img src="/logo-light.png" width={64} height={64} />
+          <img src="/logo-light.png" alt="noise logo" />
         </div>
         <div className="menu-options">
           <div className="menu-option-container">
             <div className="menu-option-title">
               <Folder size={20} weight="fill" color="#81a1c1" />
-              <span>Noise Editor</span>
+              <span>Noise</span>
             </div>
             <div className="menu-option">
               <File size={20} weight="fill" color="#5e81ac" />
@@ -52,7 +52,6 @@ const Menu = function ({ options }: MenuProps) {
             </div>
             {options.map(function (option) {
               const isOptionsSelected = option.id === optionSelected;
-
               return (
                 <div
                   key={option.id}
@@ -72,6 +71,9 @@ const Menu = function ({ options }: MenuProps) {
                 </div>
               );
             })}
+            <div className="menu-option-add">
+              <Plus size={20} weight="bold" />
+            </div>
           </div>
         </div>
         <div className="menu-footer">

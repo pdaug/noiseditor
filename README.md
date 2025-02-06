@@ -1,6 +1,6 @@
-# Fog Code
+# NOISE: Code Editor
 
-https://fogcode.com/
+https://noiseditor.com/
 
 ```json
 {

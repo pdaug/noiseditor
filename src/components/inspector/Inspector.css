@@ -1,39 +1,36 @@
 .inspector {
-  background: #2e3440;
-  background-color: #2e3440;
+  background: var(--bg-color);
+  background-color: var(--bg-color);
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.inspector-topbar {
-  align-items: center;
-  color: #d8dee9;
-  display: flex;
-  font-size: 1.5rem;
   gap: 1rem;
 }
 
 .inspector-tab {
   display: flex;
-}
-
-.inspector-tab-left,
-.inspector-tab-right {
-  display: flex;
-  gap: 0.6rem;
-}
-
-.inspector-tab-left {
   flex: 1;
 }
 
 button {
-  background: #5e81ac;
-  background-color: #5e81ac;
+  background: var(--bg-color);
+  background-color: var(--bg-color);
   border: none;
-  color: #d8dee9;
+  color: var(--ft-color);
   cursor: pointer;
-  padding: 0.6rem 2rem;
+  padding: 0 2rem;
+  height: 40px;
+  transition: 200ms;
+}
+
+button:hover {
+  background: var(--lg-color);
+  background-color: var(--lg-color);
+  cursor: pointer;
+  transition: 200ms;
+}
+
+button.inspector-tab-active {
+  background: #4e78cc;
+  background-color: #4e78cc;
+  color: white;
+  transition: 200ms;
 }

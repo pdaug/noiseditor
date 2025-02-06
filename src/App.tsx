@@ -16,12 +16,7 @@ const App = function () {
     <div className="container">
       <Menu options={AssetMenuOptions} />
       <div className="main">
-        <Inspector
-          emoji="🏉"
-          extension="js"
-          name="sum_arr"
-          setTabName={setTabName}
-        />
+        <Inspector setTabName={setTabName} />
         <div className="content">
           {tabName === "source" && <Source />}
           {tabName === "metadata" && <Metadata />}

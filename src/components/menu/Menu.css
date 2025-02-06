@@ -1,6 +1,6 @@
 .menu {
-  background: #3b4252;
-  background-color: #3b4252;
+  background: var(--fg-color);
+  background-color: var(--fg-color);
   width: 20vw;
 }
 
@@ -15,6 +15,12 @@
   user-select: none;
 }
 
+.menu-logo img {
+  aspect-ratio: 1;
+  height: 48px;
+  width: 48px;
+}
+
 .menu-options {
   display: flex;
   flex: 1;
@@ -24,13 +30,14 @@
 }
 
 .menu-options::-webkit-scrollbar {
-  background: #3b4252;
+  background: var(--fg-color);
+  background-color: var(--fg-color);
   height: 8px;
   width: 8px;
 }
 
 .menu-options::-webkit-scrollbar-thumb {
-  background: #4c566a;
+  background: var(--lg-color);
 }
 
 .menu-option-title {
@@ -43,7 +50,7 @@
 }
 
 .menu-option-title span {
-  color: #d8dee9;
+  color: var(--ft-color);
 }
 
 .menu-option-container {
@@ -60,14 +67,9 @@
   transition: 200ms;
 }
 
-.menu-option-selected {
-  background: #434c5e !important;
-  background-color: #434c5e !important;
-}
-
 .menu-option:hover {
-  background: #434c5e;
-  background-color: #434c5e;
+  background: var(--lg-color);
+  background-color: var(--lg-color);
   cursor: pointer;
   transition: 200ms;
 }
@@ -77,26 +79,61 @@
 }
 
 .menu-option span {
-  color: #d8dee9;
+  color: var(--ft-color);
   overflow: hidden;
+  font-size: 0.875rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.menu-option-selected {
+  background: var(--lg-color) !important;
+  background-color: var(--lg-color) !important;
+}
+
+.menu-option-selected span {
+  color: white !important;
+}
+
+.menu-option-add {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  transition: 200ms;
+}
+
+.menu-option-add:hover {
+  background: var(--lg-color);
+  background-color: var(--lg-color);
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.menu-option-add svg {
+  color: var(--lg-color);
+}
+
+.menu-option-add:hover svg {
+  color: var(--pr-color);
+}
+
 .menu-footer {
   align-items: center;
-  background: #3b4252;
-  background-color: #3b4252;
+  background: var(--fg-color);
+  background-color: var(--fg-color);
   display: flex;
   gap: 0.6rem;
   padding: 1rem;
 }
 
 .menu-footer:hover {
-  background: #434c5e;
-  background-color: #434c5e;
+  background: var(--lg-color);
+  background-color: var(--lg-color);
+  cursor: pointer;
 }
 
 .menu-footer span {
-  color: #d8dee9;
+  color: var(--ft-color);
 }
