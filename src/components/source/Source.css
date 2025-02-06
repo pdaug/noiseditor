@@ -22,11 +22,6 @@
   flex: 1 !important;
 }
 
-.cm-activeLine {
-  background: var(--lg-color) !important;
-  background-color: var(--lg-color) !important;
-}
-
 .cm-focused {
   outline: none !important;
 }
