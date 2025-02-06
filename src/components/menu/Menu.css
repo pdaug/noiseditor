@@ -1,6 +1,7 @@
 .menu {
-  border-right: 1px solid #d1dae0;
-  flex: 1;
+  background: #3b4252;
+  background-color: #3b4252;
+  width: 20vw;
 }
 
 .menu-inner {
@@ -10,11 +11,8 @@
 }
 
 .menu-logo {
-  align-items: center;
-  border-bottom: 1px solid #d1dae0;
-  display: flex;
-  flex-direction: column;
   padding: 1rem;
+  user-select: none;
 }
 
 .menu-options {
@@ -25,12 +23,33 @@
   overflow-y: scroll;
 }
 
+.menu-options::-webkit-scrollbar {
+  background: #3b4252;
+  height: 8px;
+  width: 8px;
+}
+
+.menu-options::-webkit-scrollbar-thumb {
+  background: #4c566a;
+}
+
 .menu-option-title {
-  background: white;
+  align-items: center;
+  display: flex;
+  cursor: default;
+  gap: 0.6rem;
   padding: 0.4rem 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 9;
+  user-select: none;
+}
+
+.menu-option-title span {
+  color: #d8dee9;
+}
+
+.menu-option-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
 }
 
 .menu-option {
@@ -38,14 +57,46 @@
   display: flex;
   gap: 0.6rem;
   padding: 0.4rem 1rem 0.4rem 2rem;
+  transition: 200ms;
+}
+
+.menu-option-selected {
+  background: #434c5e !important;
+  background-color: #434c5e !important;
 }
 
 .menu-option:hover {
-  background: #f2f4f5;
-  background-color: #f2f4f5;
+  background: #434c5e;
+  background-color: #434c5e;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.menu-option svg {
+  min-width: 20px;
+}
+
+.menu-option span {
+  color: #d8dee9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu-footer {
-  border-top: 1px solid #d1dae0;
+  align-items: center;
+  background: #3b4252;
+  background-color: #3b4252;
+  display: flex;
+  gap: 0.6rem;
   padding: 1rem;
+}
+
+.menu-footer:hover {
+  background: #434c5e;
+  background-color: #434c5e;
+}
+
+.menu-footer span {
+  color: #d8dee9;
 }

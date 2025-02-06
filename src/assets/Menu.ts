@@ -25,7 +25,7 @@ const AssetMenuOptions = [
   },
   {
     id: "ccc2222",
-    name: "func_bitesize",
+    name: "func_bitesize_array_function_haversine_code_new_version",
     extension: "ts",
     emoji: "🚀",
   },

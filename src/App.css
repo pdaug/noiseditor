@@ -2,7 +2,6 @@
 input,
 button {
   font-family: "Roboto", sans-serif;
-  color: #2c3436;
 }
 
 body {
@@ -29,12 +28,6 @@ body {
 
 .content {
   overflow: scroll;
-  height: 100%;
-}
-
-.cm-editor {
-  width: 100%;
-  height: 200vh;
 }
 
 .cm-editor * {

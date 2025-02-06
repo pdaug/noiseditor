@@ -1,7 +1,6 @@
 .inspector {
-  background: #f5f7fa;
-  background-color: #f5f7fa;
-  border-bottom: 1px solid #d4d5d6;
+  background: #2e3440;
+  background-color: #2e3440;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -10,25 +9,10 @@
 
 .inspector-topbar {
   align-items: center;
+  color: #d8dee9;
   display: flex;
-  gap: 1rem;
-}
-
-.inspector-topbar-emoji {
-  align-items: center;
-  background: white;
-  background-color: white;
-  border: 1px solid #d4d5d6;
-  border-radius: 6px;
-  display: flex;
-  height: 64px;
-  font-size: 40px;
-  justify-content: center;
-  width: 64px;
-}
-
-.inspector-topbar-filename {
   font-size: 1.5rem;
+  gap: 1rem;
 }
 
 .inspector-tab {
@@ -46,10 +30,10 @@
 }
 
 button {
-  background: white;
-  background-color: white;
-  border: 1px solid #d4d5d6;
-  border-radius: 6px;
+  background: #5e81ac;
+  background-color: #5e81ac;
+  border: none;
+  color: #d8dee9;
   cursor: pointer;
   padding: 0.6rem 2rem;
 }

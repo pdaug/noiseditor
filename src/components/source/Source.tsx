@@ -1,7 +1,9 @@
 import React from "react";
 import ReactCodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
-import { githubLight, githubLightInit } from "@uiw/codemirror-theme-github";
+
+// import { githubLight, githubLightInit } from "@uiw/codemirror-theme-github";
+import { nord, nordInit } from "@uiw/codemirror-theme-nord";
 
 const Source = function () {
   return (
@@ -9,8 +11,8 @@ const Source = function () {
       <ReactCodeMirror
         width="100%"
         value="console.log('hello world!');"
-        extensions={[githubLight, javascript()]}
-        theme={githubLightInit({
+        extensions={[nord, javascript()]}
+        theme={nordInit({
           settings: {
             fontFamily: "'Space Mono', monospace",
           },
