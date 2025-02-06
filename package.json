@@ -10,10 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@codemirror/theme-one-dark": "^6.1.2",
     "@phosphor-icons/react": "^2.1.7",
     "@uiw/codemirror-extensions-langs": "^4.23.8",
-    "@uiw/codemirror-theme-github": "^4.23.8",
     "@uiw/codemirror-theme-nord": "^4.23.8",
     "@uiw/react-codemirror": "^4.23.8",
     "react": "^18.3.1",

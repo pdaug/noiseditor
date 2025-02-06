@@ -1,5 +1,5 @@
-import React from "react";
-import ReactCodeMirror from "@uiw/react-codemirror";
+import React, { useRef } from "react";
+import ReactCodeMirror, { ReactCodeMirrorRef } from "@uiw/react-codemirror";
 
 // plugins
 import { javascript } from "@codemirror/lang-javascript";
@@ -10,6 +10,7 @@ import "./Source.css";
 
 const Source = function () {
   const extensions = [nord, javascript()];
+  const sourceRef = useRef<ReactCodeMirrorRef | null>(null);
 
   const theme = nordInit({
     settings: {
@@ -28,9 +29,17 @@ const Source = function () {
     <React.Fragment>
       <ReactCodeMirror
         theme={theme}
+        ref={sourceRef}
         extensions={extensions}
         basicSetup={basicSetup}
         value="console.log('hello world!');"
+        onUpdate={function (view) {
+          if (sourceRef.current) {
+            const pos = view.state.selection.main.head;
+            const line = view.state.doc.lineAt(pos).number;
+            console.log("Linha atual:", line);
+          }
+        }}
       />
     </React.Fragment>
   );

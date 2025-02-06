@@ -64,7 +64,7 @@ const Menu = function ({ options }: MenuProps) {
                     OptionSelect(option.id);
                     return;
                   }}>
-                  <File size={20} weight="fill" color="#5e81ac" />
+                  <File size={20} weight="fill" />
                   <span>
                     {option.name}.{option.extension}
                   </span>

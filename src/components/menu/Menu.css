@@ -1,7 +1,7 @@
 .menu {
   background: var(--fg-color);
   background-color: var(--fg-color);
-  width: 20vw;
+  width: 24vw;
 }
 
 .menu-inner {
@@ -49,6 +49,10 @@
   user-select: none;
 }
 
+.menu-option-title svg * {
+  fill: var(--lg-color) !important;
+}
+
 .menu-option-title span {
   color: var(--ft-color);
 }
@@ -78,6 +82,14 @@
   min-width: 20px;
 }
 
+.menu-option svg * {
+  fill: var(--lg-color);
+}
+
+.menu-option:hover svg * {
+  fill: var(--pr-color);
+}
+
 .menu-option span {
   color: var(--ft-color);
   overflow: hidden;
@@ -92,7 +104,11 @@
 }
 
 .menu-option-selected span {
-  color: white !important;
+  color: var(--pr-color) !important;
+}
+
+.menu-option-selected svg * {
+  fill: var(--pr-color) !important;
 }
 
 .menu-option-add {
