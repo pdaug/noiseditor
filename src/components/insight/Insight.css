@@ -1,0 +1,20 @@
+.insight {
+  overflow-y: scroll;
+  height: calc(100vh - 40px);
+}
+
+.insight input {
+  height: 32px;
+  flex: 1;
+}
+
+.mdxeditor,
+.mdxeditor-root-contenteditable,
+.mdxeditor-root-contenteditable div {
+  height: 100% !important;
+}
+
+.mdxeditor * {
+  color: var(--ft-color) !important;
+  font-family: "Roboto", sans-serif !important;
+}

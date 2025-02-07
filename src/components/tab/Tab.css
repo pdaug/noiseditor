@@ -1,23 +1,26 @@
-.inspector {
+.tab {
   background: var(--bg-color);
   background-color: var(--bg-color);
   display: flex;
   gap: 1rem;
 }
 
-.inspector-tab {
+.tab-container {
   display: flex;
   flex: 1;
 }
 
 button {
+  align-items: center;
   background: var(--bg-color);
   background-color: var(--bg-color);
   border: none;
   color: var(--ft-color);
   cursor: pointer;
-  padding: 0 2rem;
+  display: flex;
+  gap: 0.4rem;
   height: 40px;
+  padding: 0 2rem;
   transition: 200ms;
 }
 
@@ -28,7 +31,7 @@ button:hover {
   transition: 200ms;
 }
 
-button.inspector-tab-active {
+button.tab-active {
   background: #4e78cc;
   background-color: #4e78cc;
   color: white;

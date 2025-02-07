@@ -1,3 +1,8 @@
+.source {
+  overflow-y: scroll;
+  height: calc(100vh - 40px);
+}
+
 .cm-theme {
   height: 100%;
 }
@@ -9,7 +14,7 @@
 }
 
 .cm-editor * {
-  font-family: "Space Mono", monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .cm-gutters {

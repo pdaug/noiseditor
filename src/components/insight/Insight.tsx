@@ -3,16 +3,20 @@ import {
   listsPlugin,
   quotePlugin,
   headingsPlugin,
+  MDXEditorMethods,
   thematicBreakPlugin,
   markdownShortcutPlugin,
 } from "@mdxeditor/editor";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // styles
+import "./Insight.css";
 import "@mdxeditor/editor/style.css";
 
-const Metadata = function () {
-  const [description, setDescription] = useState("");
+const Insight = function () {
+  const insightRef = useRef<MDXEditorMethods | null>(null);
+  const [insightValue, setInsightValue] = useState("# Filename");
+
   const plugins = [
     quotePlugin(),
     listsPlugin(),
@@ -21,32 +25,39 @@ const Metadata = function () {
     markdownShortcutPlugin(),
   ];
 
+  useEffect(function () {
+    if (insightRef.current) {
+      insightRef.current.focus();
+      return;
+    }
+    return;
+  }, []);
+
   return (
-    <div className="metadata">
-      <div className="metadata-field">
-        <label htmlFor="metadata_name">Name</label>
+    <div className="insight">
+      <div className="insight-field">
         <input
           type="text"
           name="name"
-          id="metadata_name"
-          placeholder="name.ext"
+          minLength={2}
+          maxLength={128}
+          id="insight_name"
+          placeholder="Filename"
         />
-      </div>
-      <div className="metadata-field">
-        <label htmlFor="metadata_extension">Extension</label>
-        <select name="extension" id="metadata_extension">
+        <select name="extension" id="insight_extension">
           <option value="js">JavaScript (.js)</option>
           <option value="ts">TypeScript (.ts)</option>
           <option value="py">Python (.py)</option>
         </select>
       </div>
+
       <MDXEditor
+        ref={insightRef}
         plugins={plugins}
-        contentEditableClassName="metadata-editor"
-        markdown={description}
+        markdown={insightValue}
         onChange={function (markdown) {
           if (markdown) {
-            setDescription(markdown);
+            setInsightValue(markdown);
             return;
           }
           return;
@@ -56,4 +67,4 @@ const Metadata = function () {
   );
 };
 
-export default Metadata;
+export default Insight;

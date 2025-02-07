@@ -1,9 +1,8 @@
-import React, { useRef } from "react";
+import { useRef, useState } from "react";
 import ReactCodeMirror, { ReactCodeMirrorRef } from "@uiw/react-codemirror";
 
 // plugins
 import { javascript } from "@codemirror/lang-javascript";
-// import { nord, nordInit } from "@uiw/codemirror-theme-nord";
 import { vscodeDark, vscodeDarkInit } from "@uiw/codemirror-theme-vscode";
 
 // styles
@@ -15,7 +14,7 @@ const Source = function () {
 
   const theme = vscodeDarkInit({
     settings: {
-      fontFamily: "'Space Mono', monospace",
+      fontFamily: "'Roboto Mono', monospace",
     },
   });
 
@@ -26,14 +25,18 @@ const Source = function () {
     indentOnInput: false,
   };
 
+  const [sourceValue, setSourceValue] = useState(
+    `const myMessage = "Hello, there!";\nconsole.log(myMessage);`,
+  );
+
   return (
-    <React.Fragment>
+    <div className="source">
       <ReactCodeMirror
         theme={theme}
         ref={sourceRef}
+        value={sourceValue}
         extensions={extensions}
         basicSetup={basicSetup}
-        value="console.log('hello world!');"
         onUpdate={function (view) {
           if (sourceRef.current) {
             const pos = view.state.selection.main.head;
@@ -42,7 +45,7 @@ const Source = function () {
           }
         }}
       />
-    </React.Fragment>
+    </div>
   );
 };
 

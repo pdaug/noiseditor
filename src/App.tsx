@@ -1,26 +1,28 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
+// styles
 import "./App.css";
 
-import Menu from "./components/menu/Menu";
-import Source from "./components/source/Source";
-import Inspector from "./components/inspector/Inspector";
-import Metadata from "./components/metadata/Metadata";
-
+// assets
 import AssetMenuOptions from "./assets/Menu";
 
+// components
+import Tab from "./components/tab/Tab";
+import Menu from "./components/menu/Menu";
+import Source from "./components/source/Source";
+import Insight from "./components/insight/Insight";
+
 const App = function () {
-  const [tabName, setTabName] = useState("source");
+  const [tabId, setTabId] = useState("tab_source");
 
   return (
     <div className="container">
       <Menu options={AssetMenuOptions} />
       <div className="main">
-        <Inspector setTabName={setTabName} />
-        <div className="content">
-          {tabName === "source" && <Source />}
-          {tabName === "metadata" && <Metadata />}
-        </div>
+        <Tab tabId={tabId} setTabId={setTabId} />
+        {tabId === "tab_source" && <Source />}
+        {tabId === "tab_insight" && <Insight />}
+        {tabId === "tab_board" && <React.Fragment></React.Fragment>}
       </div>
     </div>
   );
