@@ -3,6 +3,22 @@
   height: calc(100vh - 40px);
 }
 
+.source-data {
+  background: var(--fg-color);
+  background-color: var(--fg-color);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.875rem;
+  gap: 1rem;
+  padding: 0.4rem 1rem;
+  width: 100%;
+}
+
+.source-data * {
+  color: var(--ft-color);
+}
+
 .cm-theme {
   height: 100%;
 }

@@ -37,14 +37,16 @@ const Source = function () {
         value={sourceValue}
         extensions={extensions}
         basicSetup={basicSetup}
-        onUpdate={function (view) {
-          if (sourceRef.current) {
-            const pos = view.state.selection.main.head;
-            const line = view.state.doc.lineAt(pos).number;
-            console.log("Linha atual:", line);
-          }
+        onChange={function (value) {
+          setSourceValue(value);
+          return;
         }}
       />
+      <div className="source-data">
+        <div>TabSize 0</div>
+        <div>Ln 0</div>
+        <div>Col 0</div>
+      </div>
     </div>
   );
 };

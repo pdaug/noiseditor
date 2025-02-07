@@ -11,6 +11,7 @@
 
 .insight-field input,
 .insight-field select {
+  appearance: none;
   background: var(--lg-color);
   background-color: var(--lg-color);
   border: none;

@@ -33,7 +33,7 @@ const Menu = function ({ options }: MenuProps) {
           <div className="menu-option-container">
             <div className="menu-option-title">
               <Folder size={20} weight="bold" />
-              <span>Noise</span>
+              <span>NOISEDITOR</span>
             </div>
             <div className="menu-option">
               <File size={20} weight="bold" />
@@ -52,6 +52,8 @@ const Menu = function ({ options }: MenuProps) {
             </div>
             {options.map(function (option) {
               const isOptionsSelected = option.id === optionSelected;
+              const optionFileWeight = isOptionsSelected ? "fill" : "bold";
+
               return (
                 <div
                   key={option.id}
@@ -64,7 +66,7 @@ const Menu = function ({ options }: MenuProps) {
                     OptionSelect(option.id);
                     return;
                   }}>
-                  <File size={20} weight="bold" />
+                  <File size={20} weight={optionFileWeight} />
                   <span>
                     {option.name}.{option.extension}
                   </span>
