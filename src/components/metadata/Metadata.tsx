@@ -1,16 +1,28 @@
+import {
+  MDXEditor,
+  listsPlugin,
+  quotePlugin,
+  headingsPlugin,
+  thematicBreakPlugin,
+  markdownShortcutPlugin,
+} from "@mdxeditor/editor";
+import { useState } from "react";
+
+// styles
+import "@mdxeditor/editor/style.css";
+
 const Metadata = function () {
+  const [description, setDescription] = useState("");
+  const plugins = [
+    quotePlugin(),
+    listsPlugin(),
+    headingsPlugin(),
+    thematicBreakPlugin(),
+    markdownShortcutPlugin(),
+  ];
+
   return (
     <div className="metadata">
-      <div className="metadata-field">
-        <label htmlFor="metadata_id">Id</label>
-        <input
-          disabled
-          name="id"
-          type="text"
-          id="metadata_id"
-          placeholder="abc0000"
-        />
-      </div>
       <div className="metadata-field">
         <label htmlFor="metadata_name">Name</label>
         <input
@@ -28,20 +40,18 @@ const Metadata = function () {
           <option value="py">Python (.py)</option>
         </select>
       </div>
-      <div className="metadata-field">
-        <label htmlFor="metadata_description">Description</label>
-        <textarea name="description" id="metadata_description"></textarea>
-      </div>
-      <div className="metadata-field">
-        <label htmlFor="metadata_created_at">Created At</label>
-        <input
-          disabled
-          name="created_at"
-          type="datetime-local"
-          id="metadata_created_at"
-          placeholder="yyyy-MM-dd"
-        />
-      </div>
+      <MDXEditor
+        plugins={plugins}
+        contentEditableClassName="metadata-editor"
+        markdown={description}
+        onChange={function (markdown) {
+          if (markdown) {
+            setDescription(markdown);
+            return;
+          }
+          return;
+        }}
+      />
     </div>
   );
 };

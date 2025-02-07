@@ -1,3 +1,12 @@
 .metadata {
   padding: 1rem;
 }
+
+.metadata-editor {
+  font-family: "Roboto", sans-serif;
+}
+
+.metadata-editor *,
+.mdxeditor * {
+  color: red !important;
+}

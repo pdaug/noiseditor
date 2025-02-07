@@ -3,16 +3,17 @@ import ReactCodeMirror, { ReactCodeMirrorRef } from "@uiw/react-codemirror";
 
 // plugins
 import { javascript } from "@codemirror/lang-javascript";
-import { nord, nordInit } from "@uiw/codemirror-theme-nord";
+// import { nord, nordInit } from "@uiw/codemirror-theme-nord";
+import { vscodeDark, vscodeDarkInit } from "@uiw/codemirror-theme-vscode";
 
 // styles
 import "./Source.css";
 
 const Source = function () {
-  const extensions = [nord, javascript()];
+  const extensions = [vscodeDark, javascript()];
   const sourceRef = useRef<ReactCodeMirrorRef | null>(null);
 
-  const theme = nordInit({
+  const theme = vscodeDarkInit({
     settings: {
       fontFamily: "'Space Mono', monospace",
     },

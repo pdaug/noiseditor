@@ -32,23 +32,23 @@ const Menu = function ({ options }: MenuProps) {
         <div className="menu-options">
           <div className="menu-option-container">
             <div className="menu-option-title">
-              <Folder size={20} weight="fill" color="#81a1c1" />
+              <Folder size={20} weight="bold" />
               <span>Noise</span>
             </div>
             <div className="menu-option">
-              <File size={20} weight="fill" color="#5e81ac" />
+              <File size={20} weight="bold" />
               <span>Get Started</span>
             </div>
             <div className="menu-option">
-              <File size={20} weight="fill" color="#5e81ac" />
+              <File size={20} weight="bold" />
               <span>Configuration</span>
             </div>
           </div>
 
           <div className="menu-option-container">
             <div className="menu-option-title">
-              <Folder size={20} weight="fill" color="#81a1c1" />
-              <span>Workbench</span>
+              <Folder size={20} weight="bold" />
+              <span>Explorer</span>
             </div>
             {options.map(function (option) {
               const isOptionsSelected = option.id === optionSelected;
@@ -64,7 +64,7 @@ const Menu = function ({ options }: MenuProps) {
                     OptionSelect(option.id);
                     return;
                   }}>
-                  <File size={20} weight="fill" />
+                  <File size={20} weight="bold" />
                   <span>
                     {option.name}.{option.extension}
                   </span>
@@ -73,11 +73,12 @@ const Menu = function ({ options }: MenuProps) {
             })}
             <div className="menu-option-add">
               <Plus size={20} weight="bold" />
+              <span>New file</span>
             </div>
           </div>
         </div>
         <div className="menu-footer">
-          <GearSix size={20} weight="fill" color="#5e81ac" />
+          <GearSix size={20} weight="bold" />
           <span>Settings</span>
         </div>
       </div>

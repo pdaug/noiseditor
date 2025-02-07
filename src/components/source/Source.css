@@ -3,8 +3,8 @@
 }
 
 .cm-editor {
-  background: var(--bg-color);
-  background-color: var(--bg-color);
+  /* background: var(--bg-color); */
+  /* background-color: var(--bg-color); */
   height: 100%;
 }
 
@@ -13,8 +13,8 @@
 }
 
 .cm-gutters {
-  background: var(--lg-color) !important;
-  background-color: var(--lg-color) !important;
+  /* background: var(--lg-color) !important; */
+  /* background-color: var(--lg-color) !important; */
   width: 64px !important;
 }
 

@@ -11,10 +11,12 @@
 }
 
 .menu-logo {
+  align-items: center;
+  display: flex;
   padding: 1rem;
+  justify-content: center;
   user-select: none;
 }
-
 .menu-logo img {
   aspect-ratio: 1;
   height: 48px;
@@ -28,14 +30,12 @@
   gap: 0.6rem;
   overflow-y: auto;
 }
-
 .menu-options::-webkit-scrollbar {
   background: var(--fg-color);
   background-color: var(--fg-color);
   height: 8px;
   width: 8px;
 }
-
 .menu-options::-webkit-scrollbar-thumb {
   background: var(--lg-color);
 }
@@ -48,11 +48,9 @@
   padding: 0.4rem 1rem;
   user-select: none;
 }
-
 .menu-option-title svg * {
-  fill: var(--lg-color) !important;
+  fill: var(--ft-color);
 }
-
 .menu-option-title span {
   color: var(--ft-color);
 }
@@ -68,28 +66,21 @@
   display: flex;
   gap: 0.6rem;
   padding: 0.4rem 1rem 0.4rem 2rem;
+  user-select: none;
   transition: 200ms;
 }
-
 .menu-option:hover {
   background: var(--lg-color);
   background-color: var(--lg-color);
   cursor: pointer;
   transition: 200ms;
 }
-
 .menu-option svg {
   min-width: 20px;
 }
-
 .menu-option svg * {
-  fill: var(--lg-color);
+  fill: var(--ft-color);
 }
-
-.menu-option:hover svg * {
-  fill: var(--pr-color);
-}
-
 .menu-option span {
   color: var(--ft-color);
   overflow: hidden;
@@ -102,11 +93,9 @@
   background: var(--lg-color) !important;
   background-color: var(--lg-color) !important;
 }
-
 .menu-option-selected span {
   color: var(--pr-color) !important;
 }
-
 .menu-option-selected svg * {
   fill: var(--pr-color) !important;
 }
@@ -115,24 +104,36 @@
   align-items: center;
   display: flex;
   gap: 0.6rem;
-  justify-content: center;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 1rem 0.4rem 2rem;
+  user-select: none;
   transition: 200ms;
 }
-
 .menu-option-add:hover {
   background: var(--lg-color);
   background-color: var(--lg-color);
   cursor: pointer;
   transition: 200ms;
 }
-
 .menu-option-add svg {
-  color: var(--lg-color);
+  min-width: 20px;
 }
-
-.menu-option-add:hover svg {
-  color: var(--pr-color);
+.menu-option-add svg * {
+  fill: var(--sc-color);
+}
+.menu-option-add:hover svg * {
+  fill: var(--ft-color);
+}
+.menu-option-add span {
+  color: var(--sc-color);
+  overflow: hidden;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  transition: 200ms;
+  white-space: nowrap;
+}
+.menu-option-add:hover span {
+  color: var(--ft-color);
+  transition: 200ms;
 }
 
 .menu-footer {
@@ -142,14 +143,16 @@
   display: flex;
   gap: 0.6rem;
   padding: 1rem;
+  user-select: none;
 }
-
 .menu-footer:hover {
   background: var(--lg-color);
   background-color: var(--lg-color);
   cursor: pointer;
 }
-
+.menu-footer svg {
+  fill: var(--ft-color);
+}
 .menu-footer span {
   color: var(--ft-color);
 }
