@@ -3,7 +3,7 @@ import "./Tab.css";
 
 // assets
 import AssetTabsMain from "../../assets/Tab";
-import { Play } from "@phosphor-icons/react";
+import { Play, ShareNetwork } from "@phosphor-icons/react";
 
 type TabProps = {
   tabId: string;
@@ -35,6 +35,11 @@ const Tab = function ({ tabId, setTabId }: TabProps) {
       <button>
         <Play size={16} weight="bold" />
         <span>Run</span>
+      </button>
+
+      <button>
+        <ShareNetwork size={16} weight="bold" />
+        <span>Share</span>
       </button>
     </div>
   );

@@ -13,8 +13,8 @@
 .menu-logo {
   align-items: center;
   display: flex;
-  padding: 1rem;
   justify-content: center;
+  padding: 2rem 1rem;
   user-select: none;
 }
 .menu-logo img {

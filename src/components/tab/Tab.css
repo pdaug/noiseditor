@@ -21,6 +21,7 @@ button {
   gap: 0.4rem;
   height: 40px;
   padding: 0 2rem;
+  user-select: none;
   transition: 200ms;
 }
 
@@ -32,8 +33,8 @@ button:hover {
 }
 
 button.tab-active {
-  background: #4e78cc;
-  background-color: #4e78cc;
-  color: white;
+  background: var(--pr-color);
+  background-color: var(--pr-color);
+  color: var(--bg-color);
   transition: 200ms;
 }

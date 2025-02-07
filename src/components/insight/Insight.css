@@ -3,9 +3,31 @@
   height: calc(100vh - 40px);
 }
 
-.insight input {
-  height: 32px;
+.insight-field {
+  display: flex;
+  user-select: none;
+  width: 100%;
+}
+
+.insight-field input,
+.insight-field select {
+  background: var(--lg-color);
+  background-color: var(--lg-color);
+  border: none;
+  border-radius: 0;
+  color: var(--ft-color);
+  height: 40px;
+  font-size: 1rem;
+  outline: none;
+  padding: 0 1rem;
+}
+
+.insight-field input {
   flex: 1;
+}
+
+.insight-field select {
+  min-width: 20vw !important;
 }
 
 .mdxeditor,
@@ -17,4 +39,20 @@
 .mdxeditor * {
   color: var(--ft-color) !important;
   font-family: "Roboto", sans-serif !important;
+}
+
+.insight::-webkit-scrollbar {
+  background: var(--fg-color);
+  background-color: var(--fg-color);
+  height: 8px;
+  width: 8px;
+}
+
+.insight::-webkit-scrollbar-thumb {
+  background: var(--lg-color);
+}
+
+.insight::-webkit-scrollbar-corner {
+  background: var(--fg-color);
+  background-color: var(--fg-color);
 }
