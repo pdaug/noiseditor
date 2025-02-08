@@ -62,12 +62,16 @@
 }
 
 .menu-option {
+  padding: 0 1rem 0 1.5rem;
+  user-select: none;
+  transition: 200ms;
+}
+.menu-option-inner {
   align-items: center;
   display: flex;
   gap: 0.6rem;
-  padding: 0.4rem 1rem 0.4rem 2rem;
-  user-select: none;
-  transition: 200ms;
+  border-left: 2px solid var(--lg-color);
+  padding: 0.4rem 1.5rem;
 }
 .menu-option:hover {
   background: var(--lg-color);
@@ -93,6 +97,9 @@
   background: var(--lg-color) !important;
   background-color: var(--lg-color) !important;
 }
+.menu-option-selected .menu-option-inner {
+  border-color: var(--ft-color);
+}
 .menu-option-selected span {
   color: var(--pr-color) !important;
 }
@@ -104,7 +111,7 @@
   align-items: center;
   display: flex;
   gap: 0.6rem;
-  padding: 0.4rem 1rem 0.4rem 2rem;
+  padding: 0.6rem 1rem 0.6rem 1rem;
   user-select: none;
   transition: 200ms;
 }

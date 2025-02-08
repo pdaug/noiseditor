@@ -42,11 +42,6 @@ const Source = function () {
           return;
         }}
       />
-      <div className="source-data">
-        <div>TabSize 0</div>
-        <div>Ln 0</div>
-        <div>Col 0</div>
-      </div>
     </div>
   );
 };

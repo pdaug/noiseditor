@@ -13,16 +13,16 @@ import Source from "./components/source/Source";
 import Insight from "./components/insight/Insight";
 
 const App = function () {
-  const [tabId, setTabId] = useState("tab_source");
+  const [tabId, setTabId] = useState("tab_item_source");
 
   return (
     <div className="container">
       <Menu options={AssetMenuOptions} />
       <div className="main">
         <Tab tabId={tabId} setTabId={setTabId} />
-        {tabId === "tab_source" && <Source />}
-        {tabId === "tab_insight" && <Insight />}
-        {tabId === "tab_board" && <React.Fragment></React.Fragment>}
+        {tabId === "tab_item_source" && <Source />}
+        {tabId === "tab_item_insight" && <Insight />}
+        {tabId === "tab_item_board" && <React.Fragment></React.Fragment>}
       </div>
     </div>
   );

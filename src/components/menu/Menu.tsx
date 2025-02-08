@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { File, Folder, GearSix, Plus } from "@phosphor-icons/react";
 
+// styles
 import "./Menu.css";
 
 type MenuOptions = {
   id: string;
   name: string;
   extension: string;
-  emoji: string;
   action?: () => void;
 };
 
@@ -36,12 +36,16 @@ const Menu = function ({ options }: MenuProps) {
               <span>NOISEDITOR</span>
             </div>
             <div className="menu-option">
-              <File size={20} weight="bold" />
-              <span>Get Started</span>
+              <div className="menu-option-inner">
+                <File size={20} weight="bold" />
+                <span>Get Started</span>
+              </div>
             </div>
             <div className="menu-option">
-              <File size={20} weight="bold" />
-              <span>Configuration</span>
+              <div className="menu-option-inner">
+                <File size={20} weight="bold" />
+                <span>Configuration</span>
+              </div>
             </div>
           </div>
 
@@ -66,17 +70,20 @@ const Menu = function ({ options }: MenuProps) {
                     OptionSelect(option.id);
                     return;
                   }}>
-                  <File size={20} weight={optionFileWeight} />
-                  <span>
-                    {option.name}.{option.extension}
-                  </span>
+                  <div className="menu-option-inner">
+                    <File size={20} weight={optionFileWeight} />
+                    <span>
+                      {option.name}.{option.extension}
+                    </span>
+                  </div>
                 </div>
               );
             })}
-            <div className="menu-option-add">
-              <Plus size={20} weight="bold" />
-              <span>New file</span>
-            </div>
+          </div>
+
+          <div className="menu-option-add">
+            <Plus size={20} weight="bold" />
+            <span>New file</span>
           </div>
         </div>
         <div className="menu-footer">

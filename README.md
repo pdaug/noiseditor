@@ -1,15 +1,5 @@
 # NOISEDITOR - Less noise, more code
 
-https://noiseditor.com/
+Noiseditor is the ideal tool for storing code snippets without noise. Save your code with text explanations and illustrations, and generate links to share with others.
 
-```json
-{
-  "id": "abd123",
-  "name": "first_file",
-  "extension": "js",
-  "source": "console.log('hello, world!');",
-  "description": "my first file in noiseditor",
-  "created_at": 1000000000,
-  "updated_at": 1000000000
-}
-```
+https://noiseditor.com/

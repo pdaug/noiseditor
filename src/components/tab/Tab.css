@@ -1,6 +1,7 @@
 .tab {
   background: var(--bg-color);
   background-color: var(--bg-color);
+  border-bottom: 2px solid var(--pr-color);
   display: flex;
   gap: 1rem;
 }

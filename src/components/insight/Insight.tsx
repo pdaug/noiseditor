@@ -35,22 +35,6 @@ const Insight = function () {
 
   return (
     <div className="insight">
-      <div className="insight-field">
-        <input
-          type="text"
-          name="name"
-          minLength={2}
-          maxLength={128}
-          id="insight_name"
-          placeholder="Filename"
-        />
-        <select name="extension" id="insight_extension">
-          <option value="js">JavaScript (.js)</option>
-          <option value="ts">TypeScript (.ts)</option>
-          <option value="py">Python (.py)</option>
-        </select>
-      </div>
-
       <MDXEditor
         ref={insightRef}
         plugins={plugins}
