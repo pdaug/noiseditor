@@ -1,5 +1,5 @@
 import { MouseEvent } from "react";
-import { Play, ShareNetwork } from "@phosphor-icons/react";
+import { DownloadSimple, Play, ShareNetwork } from "@phosphor-icons/react";
 
 // styles
 import "./Tab.css";
@@ -35,6 +35,15 @@ const Tab = function ({ tabId, setTabId }: TabProps) {
       id: "tab_action_run",
       name: "Run",
       Icon: Play,
+      onClick: function (event: MouseEvent<HTMLButtonElement>) {
+        console.log(event);
+        return;
+      },
+    },
+    {
+      id: "tab_action_download",
+      name: "Download",
+      Icon: DownloadSimple,
       onClick: function (event: MouseEvent<HTMLButtonElement>) {
         console.log(event);
         return;

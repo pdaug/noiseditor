@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 // assets
 import AssetMenuOptions from "../assets/Menu";
@@ -6,6 +6,7 @@ import AssetMenuOptions from "../assets/Menu";
 // components
 import Tab from "../components/tab/Tab";
 import Menu from "../components/menu/Menu";
+import Board from "../components/board/Board";
 import Source from "../components/source/Source";
 import Insight from "../components/insight/Insight";
 
@@ -18,7 +19,7 @@ const Workbench = function () {
         <Tab tabId={tabId} setTabId={setTabId} />
         {tabId === "tab_item_source" && <Source />}
         {tabId === "tab_item_insight" && <Insight />}
-        {tabId === "tab_item_board" && <React.Fragment></React.Fragment>}
+        {tabId === "tab_item_board" && <Board />}
       </div>
     </div>
   );

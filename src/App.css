@@ -57,6 +57,7 @@ body {
 
 .form-field input,
 .form-field select {
+  appearance: none;
   background: var(--background);
   background-color: var(--background);
   border: none;
