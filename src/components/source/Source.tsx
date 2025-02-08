@@ -29,6 +29,11 @@ const Source = function () {
     `const myMessage = "Hello, there!";\nconsole.log(myMessage);`,
   );
 
+  const OnChangeSource = function (value: string) {
+    setSourceValue(value);
+    return;
+  };
+
   return (
     <div className="source">
       <ReactCodeMirror
@@ -37,10 +42,7 @@ const Source = function () {
         value={sourceValue}
         extensions={extensions}
         basicSetup={basicSetup}
-        onChange={function (value) {
-          setSourceValue(value);
-          return;
-        }}
+        onChange={OnChangeSource}
       />
     </div>
   );

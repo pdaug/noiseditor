@@ -1,5 +1,8 @@
+import { MDXEditor } from "@mdxeditor/editor";
+import { useEffect, useRef, useState } from "react";
+
+// plugins
 import {
-  MDXEditor,
   listsPlugin,
   quotePlugin,
   headingsPlugin,
@@ -7,15 +10,18 @@ import {
   thematicBreakPlugin,
   markdownShortcutPlugin,
 } from "@mdxeditor/editor";
-import { useEffect, useRef, useState } from "react";
 
 // styles
 import "./Insight.css";
 import "@mdxeditor/editor/style.css";
 
-const Insight = function () {
+type InsightProps = {
+  initialInsightValue?: string;
+};
+
+const Insight = function ({ initialInsightValue }: InsightProps) {
   const insightRef = useRef<MDXEditorMethods | null>(null);
-  const [insightValue, setInsightValue] = useState("# Filename");
+  const [insightValue, setInsightValue] = useState(initialInsightValue || "");
 
   const plugins = [
     quotePlugin(),
@@ -33,19 +39,21 @@ const Insight = function () {
     return;
   }, []);
 
+  const OnChangeInsight = function (markdown: string) {
+    if (markdown) {
+      setInsightValue(markdown);
+      return;
+    }
+    return;
+  };
+
   return (
     <div className="insight">
       <MDXEditor
         ref={insightRef}
         plugins={plugins}
         markdown={insightValue}
-        onChange={function (markdown) {
-          if (markdown) {
-            setInsightValue(markdown);
-            return;
-          }
-          return;
-        }}
+        onChange={OnChangeInsight}
       />
     </div>
   );

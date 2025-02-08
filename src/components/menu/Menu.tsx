@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation, useNavigate, useParams } from "react-router";
 import { File, Folder, GearSix, Plus } from "@phosphor-icons/react";
 
 // styles
@@ -15,11 +16,38 @@ type MenuProps = {
   options: MenuOptions[];
 };
 
+const MenuIconSize = 20;
+
 const Menu = function ({ options }: MenuProps) {
-  const [optionSelected, setOptionSelected] = useState("");
+  const { id } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [optionSelected, setOptionSelected] = useState(id || "");
 
   const OptionSelect = function (optionId: string) {
     setOptionSelected(optionId);
+    return;
+  };
+
+  const isMenuHomepage = location.pathname === "/";
+  const menuHomepageIconStyle = isMenuHomepage ? "fill" : "bold";
+  const menuHomepageElementStyle = isMenuHomepage
+    ? "menu-option-homepage  menu-option-selected"
+    : "menu-option-homepage";
+
+  const GoToHomepage = function () {
+    navigate("/");
+    return;
+  };
+
+  const isMenuSettings = location.pathname === "/settings";
+  const menuSettingsIconStyle = isMenuSettings ? "fill" : "bold";
+  const menuSettingsElementStyle = isMenuSettings
+    ? "menu-option-footer  menu-option-selected"
+    : "menu-option-footer";
+
+  const GoToSettings = function () {
+    navigate("/settings");
     return;
   };
 
@@ -31,47 +59,41 @@ const Menu = function ({ options }: MenuProps) {
         </div>
         <div className="menu-options">
           <div className="menu-option-container">
-            <div className="menu-option-title">
-              <Folder size={20} weight="bold" />
-              <span>NOISEDITOR</span>
-            </div>
-            <div className="menu-option">
-              <div className="menu-option-inner">
-                <File size={20} weight="bold" />
-                <span>Get Started</span>
-              </div>
-            </div>
-            <div className="menu-option">
-              <div className="menu-option-inner">
-                <File size={20} weight="bold" />
-                <span>Configuration</span>
-              </div>
+            <div className={menuHomepageElementStyle} onClick={GoToHomepage}>
+              <File size={MenuIconSize} weight={menuHomepageIconStyle} />
+              <span>Homepage</span>
             </div>
           </div>
 
           <div className="menu-option-container">
             <div className="menu-option-title">
-              <Folder size={20} weight="bold" />
-              <span>Explorer</span>
+              <Folder size={MenuIconSize} weight="bold" />
+              <span>Workbench</span>
             </div>
             {options.map(function (option) {
-              const isOptionsSelected = option.id === optionSelected;
-              const optionFileWeight = isOptionsSelected ? "fill" : "bold";
+              const isMenuOptionsSelected = option.id === optionSelected;
+
+              const menuOptionIconStyle = isMenuOptionsSelected
+                ? "fill"
+                : "bold";
+
+              const menuOptionElementStyle = isMenuOptionsSelected
+                ? "menu-option menu-option-selected"
+                : "menu-option";
+
+              const menuOptionOnClick = function () {
+                navigate(`/workbench/${option.id}`);
+                OptionSelect(option.id);
+                return;
+              };
 
               return (
                 <div
                   key={option.id}
-                  className={
-                    isOptionsSelected
-                      ? "menu-option menu-option-selected"
-                      : "menu-option"
-                  }
-                  onClick={function () {
-                    OptionSelect(option.id);
-                    return;
-                  }}>
+                  onClick={menuOptionOnClick}
+                  className={menuOptionElementStyle}>
                   <div className="menu-option-inner">
-                    <File size={20} weight={optionFileWeight} />
+                    <File size={MenuIconSize} weight={menuOptionIconStyle} />
                     <span>
                       {option.name}.{option.extension}
                     </span>
@@ -82,12 +104,13 @@ const Menu = function ({ options }: MenuProps) {
           </div>
 
           <div className="menu-option-add">
-            <Plus size={20} weight="bold" />
+            <Plus size={MenuIconSize} weight="bold" />
             <span>New file</span>
           </div>
         </div>
-        <div className="menu-footer">
-          <GearSix size={20} weight="bold" />
+
+        <div className={menuSettingsElementStyle} onClick={GoToSettings}>
+          <GearSix size={MenuIconSize} weight={menuSettingsIconStyle} />
           <span>Settings</span>
         </div>
       </div>

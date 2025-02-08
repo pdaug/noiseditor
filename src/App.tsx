@@ -1,30 +1,22 @@
-import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router";
 
 // styles
 import "./App.css";
 
-// assets
-import AssetMenuOptions from "./assets/Menu";
-
-// components
-import Tab from "./components/tab/Tab";
-import Menu from "./components/menu/Menu";
-import Source from "./components/source/Source";
-import Insight from "./components/insight/Insight";
+// screens
+import Homepage from "./screens/Homepage";
+import Settings from "./screens/Settings";
+import Workbench from "./screens/Workbench";
 
 const App = function () {
-  const [tabId, setTabId] = useState("tab_item_source");
-
   return (
-    <div className="container">
-      <Menu options={AssetMenuOptions} />
-      <div className="main">
-        <Tab tabId={tabId} setTabId={setTabId} />
-        {tabId === "tab_item_source" && <Source />}
-        {tabId === "tab_item_insight" && <Insight />}
-        {tabId === "tab_item_board" && <React.Fragment></React.Fragment>}
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/workbench/:id" element={<Workbench />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
