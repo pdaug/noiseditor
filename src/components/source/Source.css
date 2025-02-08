@@ -42,3 +42,58 @@
   background: var(--foreground);
   background-color: var(--foreground);
 }
+
+.cm-panels {
+  background: var(--foreground) !important;
+  background-color: var(--foreground) !important;
+}
+
+.cm-panel {
+  align-items: center !important;
+  display: grid !important;
+  grid-template-columns: 1fr 100px 100px 100px !important;
+  gap: 0.4rem !important;
+  padding: 0.4rem !important;
+  padding-right: 2rem !important;
+  margin: 0 !important;
+}
+
+.cm-panel input[name="search"],
+.cm-panel input[name="replace"] {
+  background: var(--background) !important;
+  background-color: var(--background) !important;
+  color: var(--font-primary) !important;
+  font-family: "Roboto Mono", monospace !important;
+  border: none !important;
+  margin: 0 !important;
+  outline: none !important;
+  padding: 0 1rem !important;
+  height: 38px !important;
+}
+
+.cm-panel button.cm-button {
+  background: var(--primary) !important;
+  background-color: var(--primary) !important;
+  color: var(--background) !important;
+  font-family: "Roboto Mono", monospace !important;
+  border: none !important;
+  margin: 0 !important;
+  outline: none !important;
+  padding: 0 1rem !important;
+  height: 38px !important;
+}
+
+.cm-panel label {
+  color: var(--font-primary) !important;
+  font-family: "Roboto Mono", monospace !important;
+  display: none;
+}
+
+.cm-panel br {
+  display: none;
+}
+
+.cm-panel *[name="replace"],
+.cm-panel *[name="replaceAll"] {
+  display: none;
+}
