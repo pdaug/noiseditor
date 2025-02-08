@@ -5,6 +5,9 @@ import { File, Folder, GearSix, Plus } from "@phosphor-icons/react";
 // styles
 import "./Menu.css";
 
+// context
+import { useModal } from "../modal/ModalContext";
+
 type MenuOptions = {
   id: string;
   name: string;
@@ -24,8 +27,15 @@ const Menu = function ({ options }: MenuProps) {
   const navigate = useNavigate();
   const [optionSelected, setOptionSelected] = useState(id || "");
 
+  const { openModal } = useModal();
+
   const OptionSelect = function (optionId: string) {
     setOptionSelected(optionId);
+    return;
+  };
+
+  const OptionNewFile = function () {
+    openModal("modal_create");
     return;
   };
 
@@ -103,7 +113,7 @@ const Menu = function ({ options }: MenuProps) {
             })}
           </div>
 
-          <div className="menu-option-add">
+          <div className="menu-option-add" onClick={OptionNewFile}>
             <Plus size={MenuIconSize} weight="bold" />
             <span>New file</span>
           </div>

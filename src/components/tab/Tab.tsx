@@ -4,6 +4,9 @@ import { Play, ShareNetwork } from "@phosphor-icons/react";
 // styles
 import "./Tab.css";
 
+// context
+import { useModal } from "../modal/ModalContext";
+
 const TabItems = [
   {
     id: "tab_item_source",
@@ -19,33 +22,36 @@ const TabItems = [
   },
 ];
 
-const TabActions = [
-  {
-    id: "tab_action_run",
-    name: "Run",
-    Icon: Play,
-    onClick: function (event: MouseEvent<HTMLButtonElement>) {
-      console.log(event);
-      return;
-    },
-  },
-  {
-    id: "tab_action_share",
-    name: "Share",
-    Icon: ShareNetwork,
-    onClick: function (event: MouseEvent<HTMLButtonElement>) {
-      console.log(event);
-      return;
-    },
-  },
-];
-
 type TabProps = {
   tabId: string;
   setTabId: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const Tab = function ({ tabId, setTabId }: TabProps) {
+  const { openModal } = useModal();
+
+  const TabActions = [
+    {
+      id: "tab_action_run",
+      name: "Run",
+      Icon: Play,
+      onClick: function (event: MouseEvent<HTMLButtonElement>) {
+        console.log(event);
+        return;
+      },
+    },
+    {
+      id: "tab_action_share",
+      name: "Share",
+      Icon: ShareNetwork,
+      onClick: function (event: MouseEvent<HTMLButtonElement>) {
+        console.log(event);
+        openModal("modal_share");
+        return;
+      },
+    },
+  ];
+
   return (
     <div className="tab">
       <div className="tab-main">
