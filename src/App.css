@@ -1,12 +1,12 @@
 :root {
-  --bg-color: #1f1f1f;
-  --fg-color: #252526;
-  --lg-color: #38383d;
+  --background: #1f1f1f;
+  --foreground: #252526;
+  --castground: #38383d;
 
-  --ft-color: #ccc;
-  --sc-color: #858585;
+  --font-primary: #ccc;
+  --font-secondary: #858585;
 
-  --pr-color: #ff7272;
+  --primary: #ff5d73;
 }
 
 *,
@@ -20,8 +20,8 @@ button {
 }
 
 body {
-  background: var(--bg-color);
-  background-color: var(--bg-color);
+  background: var(--background);
+  background-color: var(--background);
   margin: 0;
   overflow: hidden;
 }

@@ -1,22 +1,26 @@
 .tab {
-  background: var(--bg-color);
-  background-color: var(--bg-color);
-  border-bottom: 2px solid var(--pr-color);
+  background: var(--background);
+  background-color: var(--background);
+  border-bottom: 2px solid var(--primary);
   display: flex;
   gap: 1rem;
 }
 
-.tab-container {
+.tab-main {
   display: flex;
   flex: 1;
 }
 
+.tab-actions {
+  display: flex;
+}
+
 button {
   align-items: center;
-  background: var(--bg-color);
-  background-color: var(--bg-color);
+  background: var(--background);
+  background-color: var(--background);
   border: none;
-  color: var(--ft-color);
+  color: var(--font-primary);
   cursor: pointer;
   display: flex;
   gap: 0.4rem;
@@ -27,15 +31,15 @@ button {
 }
 
 button:hover {
-  background: var(--lg-color);
-  background-color: var(--lg-color);
+  background: var(--castground);
+  background-color: var(--castground);
   cursor: pointer;
   transition: 200ms;
 }
 
 button.tab-active {
-  background: var(--pr-color);
-  background-color: var(--pr-color);
-  color: var(--bg-color);
+  background: var(--primary);
+  background-color: var(--primary);
+  color: var(--background);
   transition: 200ms;
 }

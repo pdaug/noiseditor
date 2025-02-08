@@ -28,17 +28,17 @@
 }
 
 .cm-scroller::-webkit-scrollbar {
-  background: var(--fg-color);
-  background-color: var(--fg-color);
+  background: var(--foreground);
+  background-color: var(--foreground);
   height: 8px;
   width: 8px;
 }
 
 .cm-scroller::-webkit-scrollbar-thumb {
-  background: var(--lg-color);
+  background: var(--castground);
 }
 
 .cm-scroller::-webkit-scrollbar-corner {
-  background: var(--fg-color);
-  background-color: var(--fg-color);
+  background: var(--foreground);
+  background-color: var(--foreground);
 }

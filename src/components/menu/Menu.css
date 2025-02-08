@@ -1,6 +1,6 @@
 .menu {
-  background: var(--fg-color);
-  background-color: var(--fg-color);
+  background: var(--foreground);
+  background-color: var(--foreground);
   width: 24vw;
 }
 
@@ -31,13 +31,13 @@
   overflow-y: auto;
 }
 .menu-options::-webkit-scrollbar {
-  background: var(--fg-color);
-  background-color: var(--fg-color);
+  background: var(--foreground);
+  background-color: var(--foreground);
   height: 8px;
   width: 8px;
 }
 .menu-options::-webkit-scrollbar-thumb {
-  background: var(--lg-color);
+  background: var(--castground);
 }
 
 .menu-option-title {
@@ -49,10 +49,10 @@
   user-select: none;
 }
 .menu-option-title svg * {
-  fill: var(--ft-color);
+  fill: var(--font-primary);
 }
 .menu-option-title span {
-  color: var(--ft-color);
+  color: var(--font-primary);
 }
 
 .menu-option-homepage {
@@ -65,16 +65,16 @@
   transition: 200ms;
 }
 .menu-option-homepage:hover {
-  background: var(--lg-color);
-  background-color: var(--lg-color);
+  background: var(--castground);
+  background-color: var(--castground);
   cursor: pointer;
   transition: 200ms;
 }
 .menu-option-homepage svg * {
-  fill: var(--ft-color);
+  fill: var(--font-primary);
 }
 .menu-option-homepage span {
-  color: var(--ft-color);
+  color: var(--font-primary);
 }
 
 .menu-option-container {
@@ -92,12 +92,12 @@
   align-items: center;
   display: flex;
   gap: 0.6rem;
-  border-left: 2px solid var(--lg-color);
+  border-left: 2px solid var(--castground);
   padding: 0.4rem 1.5rem;
 }
 .menu-option:hover {
-  background: var(--lg-color);
-  background-color: var(--lg-color);
+  background: var(--castground);
+  background-color: var(--castground);
   cursor: pointer;
   transition: 200ms;
 }
@@ -105,10 +105,10 @@
   min-width: 20px;
 }
 .menu-option svg * {
-  fill: var(--ft-color);
+  fill: var(--font-primary);
 }
 .menu-option span {
-  color: var(--ft-color);
+  color: var(--font-primary);
   overflow: hidden;
   font-size: 0.875rem;
   text-overflow: ellipsis;
@@ -116,17 +116,17 @@
 }
 
 .menu-option-selected {
-  background: var(--lg-color) !important;
-  background-color: var(--lg-color) !important;
+  background: var(--castground) !important;
+  background-color: var(--castground) !important;
 }
 .menu-option-selected .menu-option-inner {
-  border-color: var(--ft-color);
+  border-color: var(--font-primary);
 }
 .menu-option-selected span {
-  color: var(--pr-color) !important;
+  color: var(--primary) !important;
 }
 .menu-option-selected svg * {
-  fill: var(--pr-color) !important;
+  fill: var(--primary) !important;
 }
 
 .menu-option-add {
@@ -138,8 +138,8 @@
   transition: 200ms;
 }
 .menu-option-add:hover {
-  background: var(--lg-color);
-  background-color: var(--lg-color);
+  background: var(--castground);
+  background-color: var(--castground);
   cursor: pointer;
   transition: 200ms;
 }
@@ -147,13 +147,13 @@
   min-width: 20px;
 }
 .menu-option-add svg * {
-  fill: var(--sc-color);
+  fill: var(--font-secondary);
 }
 .menu-option-add:hover svg * {
-  fill: var(--ft-color);
+  fill: var(--font-primary);
 }
 .menu-option-add span {
-  color: var(--sc-color);
+  color: var(--font-secondary);
   overflow: hidden;
   font-size: 0.875rem;
   text-overflow: ellipsis;
@@ -161,27 +161,27 @@
   white-space: nowrap;
 }
 .menu-option-add:hover span {
-  color: var(--ft-color);
+  color: var(--font-primary);
   transition: 200ms;
 }
 
 .menu-option-footer {
   align-items: center;
-  background: var(--fg-color);
-  background-color: var(--fg-color);
+  background: var(--foreground);
+  background-color: var(--foreground);
   display: flex;
   gap: 0.6rem;
   padding: 1rem;
   user-select: none;
 }
 .menu-option-footer:hover {
-  background: var(--lg-color);
-  background-color: var(--lg-color);
+  background: var(--castground);
+  background-color: var(--castground);
   cursor: pointer;
 }
 .menu-option-footer svg {
-  fill: var(--ft-color);
+  fill: var(--font-primary);
 }
 .menu-option-footer span {
-  color: var(--ft-color);
+  color: var(--font-primary);
 }

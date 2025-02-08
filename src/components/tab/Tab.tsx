@@ -48,7 +48,7 @@ type TabProps = {
 const Tab = function ({ tabId, setTabId }: TabProps) {
   return (
     <div className="tab">
-      <div className="tab-container">
+      <div className="tab-main">
         {TabItems.map(function (item) {
           const isTabSelected = tabId === item.id;
           const TabChange = function () {
@@ -65,14 +65,16 @@ const Tab = function ({ tabId, setTabId }: TabProps) {
           );
         })}
       </div>
-      {TabActions.map(function (action) {
-        return (
-          <button key={action.id} onClick={action.onClick}>
-            <action.Icon size={16} weight="bold" />
-            <span>{action.name}</span>
-          </button>
-        );
-      })}
+      <div className="tab-actions">
+        {TabActions.map(function (action) {
+          return (
+            <button key={action.id} onClick={action.onClick}>
+              <action.Icon size={16} weight="bold" />
+              <span>{action.name}</span>
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };

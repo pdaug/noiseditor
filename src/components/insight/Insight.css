@@ -6,26 +6,48 @@
 .mdxeditor,
 .mdxeditor-root-contenteditable,
 .mdxeditor-root-contenteditable div {
-  height: 100% !important;
+  height: 100%;
 }
 
 .mdxeditor * {
-  color: var(--ft-color) !important;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", sans-serif;
 }
 
 .insight::-webkit-scrollbar {
-  background: var(--fg-color);
-  background-color: var(--fg-color);
+  background: var(--foreground);
+  background-color: var(--foreground);
   height: 8px;
   width: 8px;
 }
 
 .insight::-webkit-scrollbar-thumb {
-  background: var(--lg-color);
+  background: var(--castground);
 }
 
 .insight::-webkit-scrollbar-corner {
-  background: var(--fg-color);
-  background-color: var(--fg-color);
+  background: var(--foreground);
+  background-color: var(--foreground);
+}
+
+.mdxeditor h1,
+.mdxeditor h2,
+.mdxeditor h3 {
+  color: var(--primary);
+}
+
+.mdxeditor p,
+.mdxeditor h4,
+.mdxeditor h5,
+.mdxeditor h6,
+.mdxeditor ul,
+.mdxeditor blockquote {
+  color: var(--font-primary);
+  opacity: 0.8;
+}
+
+.mdxeditor blockquote {
+  background: var(--foreground);
+  background-color: var(--foreground);
+  font-style: italic;
+  padding: 1rem;
 }
