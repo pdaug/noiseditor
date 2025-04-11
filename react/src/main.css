@@ -1,0 +1,61 @@
+html,
+input,
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+}
+
+#ne-container {
+  display: flex;
+  height: 100svh;
+  width: 100%;
+}
+
+.ne-node-code {
+  background: #1f1f1f;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  color: #eee;
+  cursor: default;
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.ne-node-draggable {
+  cursor: grab;
+  height: 2rem !important;
+}
+
+.ne-node-code-header {
+  display: flex;
+}
+
+.ne-node-code-header input {
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  color: #eee;
+  flex: 1;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+.ne-node-code-header select {
+  background: #2b2b2b;
+  background-color: #2b2b2b;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  outline: none;
+  padding: 0.4rem 1rem;
+}

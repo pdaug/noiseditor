@@ -1,0 +1,27 @@
+@url = localhost:5005
+@flowId = 01960114127f7000be2793992ada0304
+@codeId = 01960115b6d8700084a1ea7ca532f974
+
+###
+
+POST http://{{url}}/api/code HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "myfile",
+  "extension": "ts",
+  "description": "eae",
+  "source": "console.log('eae')",
+  "flowId": "01960114127f7000be2793992ada0304"
+}
+
+###
+
+PUT http://{{url}}/api/code/{{codeId}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "description": "tchau",
+  "source": "console.log('tchau')"
+}
+

@@ -1,0 +1,16 @@
+@url = localhost:5005
+@flowId = 01960114127f7000be2793992ada0304
+
+###
+
+GET http://{{url}}/api/flow/{{flowId}} HTTP/1.1
+
+###
+
+POST http://{{url}}/api/flow HTTP/1.1
+Content-Type: application/json
+
+{
+  "nodes": [],
+  "edges": []
+}
